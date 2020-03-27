@@ -76,7 +76,7 @@ public class App<actionEvent> extends Application {
     private final int hexBlue1 = 0xFF0000FF;
     private RouteTask solveRouteTask;
     private RouteParameters routeParameters;
-    private Button btnRouteLogger, btnSaveRoute, btnDrawRoute;
+    private Button btnRouteLogger, btnSaveRoute, btnDrawRoute, btnSearchPoint;
     private Stage stageRouteLogger;
     private Scene sceneRouteLogger;
     private ListView<com.mycompany.app.Route> listViewLogger;
@@ -245,6 +245,12 @@ public class App<actionEvent> extends Application {
     	btnRouteLogger.autosize();
     	StackPane.setAlignment(btnRouteLogger, Pos.TOP_CENTER);
     	StackPane.setMargin(btnRouteLogger, new Insets(10, 10, 0, 0));
+    	
+    	btnSearchPoint = new Button("Buscar");
+    	btnSearchPoint.setDefaultButton(true);
+    	btnSearchPoint.autosize();
+    	StackPane.setAlignment(btnSearchPoint, Pos.TOP_LEFT);
+    	StackPane.setMargin(btnSearchPoint, new Insets(10, 10, 0, 0));
     }
     private void createLoggerRoute(Stage stage) {
 		stageRouteLogger = new Stage();
@@ -347,7 +353,7 @@ public class App<actionEvent> extends Application {
         createLoggerRoute(stage);
         mapView = new MapView();
         crearComponents();
-        stackPane.getChildren().addAll(mapView, btnRouteLogger);
+        stackPane.getChildren().addAll(mapView, btnRouteLogger, btnSearchPoint);
         
         setupMap();
         setupAuthentication();
