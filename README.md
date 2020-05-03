@@ -1,7 +1,8 @@
 ## AppArcgis
 Desktop application that displays a basemap using the ArcGIS Java SDK to create routes and save them to a routes logger.
 ## Instruction
-#Eclipse
+Eclipse
+
 Open Eclipse and select File > Import.
 
 In the import wizard, choose Gradle > Existing Gradle Project, then click Next.
